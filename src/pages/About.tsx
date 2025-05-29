@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaUserMd, FaGraduationCap, FaHeartbeat, FaUsers } from 'react-icons/fa';
+import { FaUserMd, FaGraduationCap, FaHeartbeat } from 'react-icons/fa';
 import { GiMedicines } from 'react-icons/gi';
 
 const About = () => {
