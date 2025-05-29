@@ -123,7 +123,7 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Our Services
+            My Biokinetics Skills & Offerings
           </motion.h1>
           <motion.p 
             className="text-xl text-primary-100 max-w-3xl mx-auto"
@@ -131,7 +131,7 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Comprehensive biokinetics services tailored to your unique needs and goals
+            A showcase of my skills, training, and practical experience as a biokinetics student
           </motion.p>
         </div>
       </section>
@@ -140,9 +140,9 @@ const Services = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Comprehensive Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">My Biokinetics Skills</h2>
             <p className="text-gray-600">
-              At Nkechi Biokinetics, we offer a wide range of evidence-based services designed to help you achieve optimal health, recover from injuries, and enhance your physical performance.
+              As a 4th-year student at Tshwane University of Technology, I have developed a strong foundation in the following areas of biokinetics through coursework, clinical placements, and hands-on projects.
             </p>
           </div>
           
@@ -163,7 +163,7 @@ const Services = () => {
                   <h3 className="text-xl font-bold mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <div className="space-y-2 mt-6">
-                    <h4 className="font-semibold text-gray-800">Service includes:</h4>
+                    <h4 className="font-semibold text-gray-800">My Skills & Training:</h4>
                     <ul className="space-y-2">
                       {service.details.map((detail, i) => (
                         <li key={i} className="flex items-start">
@@ -177,8 +177,8 @@ const Services = () => {
                   </div>
                 </div>
                 <div className="bg-gray-50 px-8 py-4 border-t border-gray-100">
-                  <button className="text-primary-600 font-medium hover:text-primary-700 transition-colors flex items-center bg-white/80 px-4 py-2 rounded-lg">
-                    Learn more
+                  <button className="text-primary-600 font-semibold transition-colors flex items-center bg-white/80 px-4 py-2 rounded-lg">
+                    <span className="text-primary-600 font-semibold">MY SKILLS & TRAINING</span>
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -196,7 +196,7 @@ const Services = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Specialized Programs</h2>
             <p className="text-gray-600">
-              In addition to our core services, we offer specialized programs designed to meet the unique needs of specific populations.
+              As a 4th-year Biokinetics student at Tshwane University of Technology, my training includes practical experience at the TUT Biokinetics Lab (university athletes). I focus on evidence-based exercise, rehabilitation, and performance optimization.
             </p>
           </div>
           
@@ -221,7 +221,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Our Approach */}
+      {/* My Approach */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -234,7 +234,7 @@ const Services = () => {
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <img 
                   src="/images/nkechi5.jpg" 
-                  alt="Our approach" 
+                  alt="My approach" 
                   className="w-full h-auto"
                 />
               </div>
@@ -245,9 +245,9 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Approach to Care</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">My Approach to Biokinetics</h2>
               <p className="text-gray-600 mb-6">
-                At Nkechi Biokinetics, we believe in a patient-centered approach that addresses the root cause of your condition, not just the symptoms. Our evidence-based methodology ensures you receive the most effective treatment possible.
+                I believe in a client-centered approach that addresses the root cause of each challenge, not just the symptoms. My evidence-based methodology and hands-on practicals ensure you receive effective, individualized support—whether you’re an athlete, staff member, or anyone seeking better movement.
               </p>
               <div className="space-y-4">
                 {[
@@ -265,7 +265,7 @@ const Services = () => {
                   },
                   {
                     title: 'Education & Empowerment',
-                    description: 'Providing you with the knowledge and tools to take control of your health.'
+                    description: 'Providing you with the knowledge and tools to take control of your health and well-being.'
                   }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
@@ -289,22 +289,22 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-16 bg-primary-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey to Better Health?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Move Better, Feel Better?</h2>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8">
-            Discover how our expert biokinetics services can help you achieve your health and wellness goals.
+            Let’s work together to achieve your movement, health, or performance goals—book a session or connect with me today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/book" 
               className="inline-block bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 rounded-full font-medium text-lg transition-colors"
             >
-              Book an Appointment
+              Book a Session
             </a>
             <a 
               href="/contact" 
               className="inline-block border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-full font-medium text-lg transition-colors"
             >
-              Contact Us
+              Contact Me
             </a>
           </div>
         </div>

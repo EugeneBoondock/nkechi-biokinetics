@@ -35,7 +35,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-primary-400 transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-primary-400 transition-colors">Our Services</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-primary-400 transition-colors">My Services</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-primary-400 transition-colors">Contact Us</Link></li>
               <li><Link to="/book" className="text-gray-400 hover:text-primary-400 transition-colors">Book Appointment</Link></li>
               <li><Link to="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors">Privacy Policy</Link></li>
@@ -48,7 +48,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="h-5 w-5 mt-0.5 text-primary-400 flex-shrink-0" />
-                <span className="text-gray-400">123 Health Street, Sandton<br />Gauteng, 2196<br />South Africa</span>
+                <span className="text-gray-400">7584+GF, Philip Nel Park, Pretoria,<br />Gauteng, 0029<br />South Africa</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FaPhone className="h-4 w-4 text-primary-400" />

@@ -3,24 +3,6 @@ import { FaUserMd, FaGraduationCap, FaHeartbeat, FaUsers } from 'react-icons/fa'
 import { GiMedicines } from 'react-icons/gi';
 
 const About = () => {
-  // Team members data
-  const teamMembers = [
-    {
-      id: 1,
-      name: 'Dr. Nkechinyeremo Aniamah',
-      role: 'Lead Biokineticist',
-      bio: 'With extensive experience in biokinetics, Dr. Aniamah specializes in sports rehabilitation and chronic disease management.',
-      image: '/images/nkechi3.jpg'
-    }
-  ];
-
-  // Stats data
-  const stats = [
-    { id: 1, value: '4+', label: 'Years Experience', icon: <FaUserMd className="h-8 w-8" /> },
-    { id: 2, value: '2000+', label: 'Patients Treated', icon: <FaHeartbeat className="h-8 w-8" /> },
-    { id: 3, value: '98%', label: 'Success Rate', icon: <GiMedicines className="h-8 w-8" /> },
-    { id: 4, value: '15+', label: 'Specialists', icon: <FaUsers className="h-8 w-8" /> }
-  ];
 
   return (
     <div className="pt-24 pb-16">
@@ -33,7 +15,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            About Nkechi Biokinetics
+            About Nkechinyeremo Nompumelelo Aniamah
           </motion.h1>
           <motion.p 
             className="text-xl text-primary-100 max-w-3xl mx-auto"
@@ -41,12 +23,12 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Empowering your health journey through expert biokinetics care in Gauteng
+            Empowering others through movement and science — my journey in Biokinetics at Tshwane University of Technology
           </motion.p>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* My Story */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -62,10 +44,6 @@ const About = () => {
                   alt="Our clinic" 
                   className="w-full h-auto"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-lg w-48">
-                  <div className="text-4xl font-bold">2025</div>
-                  <div className="text-sm">Established</div>
-                </div>
               </div>
             </motion.div>
             <motion.div
@@ -74,22 +52,22 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">My Story</h2>
               <p className="text-gray-600 mb-6">
-                Founded in 2025 by Dr. Nkechi Aniamah, Nkechi Biokinetics began as a small practice with a big vision: to provide exceptional biokinetics care that transforms lives. What started as a single-room clinic has grown into one of Gauteng's leading biokinetics centers, serving thousands of patients across the region.
+                My journey in Biokinetics began at Tshwane University of Technology, where I am currently a 4th-year student, graduating in 2025. From my first lecture, I was inspired by the power of movement science to change lives. Over the years, I have developed a deep passion for helping others recover, improve, and thrive through evidence-based exercise and rehabilitation.
               </p>
               <p className="text-gray-600 mb-6">
-                Our journey has been shaped by our commitment to excellence, innovation in treatment approaches, and the success stories of our patients. We believe in a holistic approach to health and wellness, addressing not just the physical but also the emotional and psychological aspects of rehabilitation and performance enhancement.
+                My approach is holistic, focusing not just on the body, but on the mind and spirit. I believe in empowering each person to take charge of their health journey, and I am committed to continuous learning and growth in my field.
               </p>
               <p className="text-gray-600">
-                Today, we continue to uphold our founding principles while embracing the latest advancements in biokinetics to provide our patients with the highest standard of care.
+                As I prepare to graduate in 2025, I am excited to bring my knowledge, compassion, and energy to the world as a biokineticist.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Our Mission & Vision */}
+      {/* My Mission & Vision */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -103,12 +81,12 @@ const About = () => {
               <div className="bg-primary-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <FaHeartbeat className="h-8 w-8 text-primary-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold mb-4">My Mission</h3>
               <p className="text-gray-600 mb-4">
-                To empower individuals to achieve optimal health and physical function through evidence-based biokinetics interventions, personalized care, and education.
+                To empower individuals to achieve their best physical health through evidence-based exercise, movement, and education, while growing as a compassionate and knowledgeable biokineticist.
               </p>
               <p className="text-gray-600">
-                We are committed to providing accessible, high-quality care that addresses the unique needs of each patient, helping them overcome physical challenges and enhance their quality of life.
+                I am dedicated to providing accessible, high-quality support and guidance to everyone I work with, helping them overcome challenges and achieve their goals.
               </p>
             </motion.div>
             
@@ -122,25 +100,25 @@ const About = () => {
               <div className="bg-primary-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <FaGraduationCap className="h-8 w-8 text-primary-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold mb-4">My Vision</h3>
               <p className="text-gray-600 mb-4">
-                To be the leading biokinetics practice in Gauteng, recognized for excellence in rehabilitation, performance enhancement, and innovative treatment approaches.
+                To become a leader in biokinetics, inspiring others through my dedication, expertise, and commitment to lifelong learning.
               </p>
               <p className="text-gray-600">
-                We envision a community where everyone has access to the care they need to live active, healthy, and fulfilling lives, free from physical limitations.
+                I envision a world where everyone has the knowledge and support to live active, healthy, and fulfilling lives.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* My Values */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">My Core Values</h2>
             <p className="text-gray-600">
-              These principles guide everything we do at Nkechi Biokinetics and shape the way we care for our patients.
+              These values guide my studies, my practice, and my approach to helping others.
             </p>
           </div>
           
@@ -148,35 +126,35 @@ const About = () => {
             {[
               {
                 title: 'Excellence',
-                description: 'We are committed to the highest standards of professional practice and continuous improvement.'
+                description: 'I am committed to the highest standards of professional practice and continuous self-improvement.'
               },
               {
                 title: 'Compassion',
-                description: 'We treat every patient with empathy, respect, and understanding.'
+                description: 'I treat every person with empathy, respect, and understanding.'
               },
               {
                 title: 'Integrity',
-                description: 'We maintain the highest ethical standards in all our interactions and decisions.'
+                description: 'I maintain the highest ethical standards in all my interactions and decisions.'
               },
               {
                 title: 'Innovation',
-                description: 'We embrace new research and technologies to provide cutting-edge care.'
+                description: 'I embrace new research and technologies to provide the best possible support.'
               },
               {
                 title: 'Collaboration',
-                description: 'We work together with patients and healthcare professionals to achieve the best outcomes.'
+                description: 'I believe in collaboration with peers, mentors, and clients to achieve the best outcomes.'
               },
               {
                 title: 'Empowerment',
-                description: 'We educate and support our patients to take an active role in their health journey.'
+                description: 'I educate and support others to take an active role in their health journey.'
               },
               {
                 title: 'Inclusivity',
-                description: 'We provide accessible, culturally sensitive care to all members of our community.'
+                description: 'I strive to provide accessible, culturally sensitive support to all.'
               },
               {
                 title: 'Accountability',
-                description: 'We take responsibility for our actions and their impact on our patients and community.'
+                description: 'I take responsibility for my actions and their impact on others.'
               }
             ].map((value, index) => (
               <motion.div 
@@ -199,37 +177,60 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Our Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">My Journey & Experience</h2>
             <p className="text-gray-600">
-              Our team of dedicated professionals brings together expertise, compassion, and a shared commitment to your health and well-being.
+              I am a 4th-year Biokinetics student at Tshwane University of Technology, graduating in 2025. My academic journey has been enriched by hands-on practicals at the TUT Biokinetics Lab (working with university athletes) helping others.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div 
-                key={member.id}
-                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="h-64 overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-primary-600 font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 gap-8">
+  <motion.div 
+    className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+  >
+    <div className="h-64 overflow-hidden">
+      <img 
+        src="/images/biokineticist.png" 
+        alt="Nkechi Aniamah" 
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <div className="p-6">
+      <h3 className="text-xl font-bold mb-1">Nkechinyeremo Nompumelelo Aniamah</h3>
+      <p className="text-primary-600 font-medium mb-3">Biokinetics Student, Tshwane University of Technology</p>
+      <div className="mt-6">
+        <h4 className="text-lg font-semibold mb-2 text-primary-700">Professional Practicals</h4>
+        <p className="text-gray-600 text-sm mb-5">My academic journey has been enriched by hands-on practical experience in real-world health and sports environments:</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-xl bg-primary-50 border border-primary-100 p-5 flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div className="flex items-center mb-3">
+              <span className="bg-primary-100 text-primary-700 rounded-full p-2 mr-3">
+                {/* BMW icon */}
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 21v-4a2 2 0 012-2h3V9a2 2 0 012-2h2a2 2 0 012 2v6h3a2 2 0 012 2v4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </span>
+              <span className="font-bold text-primary-800 text-base"></span>
+            </div>
+            <p className="text-gray-700 text-sm">Conducted </p>
           </div>
+          <div className="rounded-xl bg-primary-50 border border-primary-100 p-5 flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div className="flex items-center mb-3">
+              <span className="bg-primary-100 text-primary-700 rounded-full p-2 mr-3">
+                {/* Running icon */}
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M13 16V21M13 16l-2-3m2 3l2-3m-2-3a2 2 0 100-4 2 2 0 000 4zm0 0v1m0 0c-3.866 0-7 1.343-7 3v2a2 2 0 002 2h10a2 2 0 002-2v-2c0-1.657-3.134-3-7-3z" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </span>
+              <span className="font-bold text-primary-800 text-base">TUT Biokinetics Lab</span>
+            </div>
+            <p className="text-gray-700 text-sm">Worked with university athletes, assisting with injury prevention, rehabilitation, and performance optimization.</p>
+          </div>
+        </div>
+      </div>
+      <p className="text-gray-600 text-sm mt-6">These experiences have deepened my understanding of biokinetics in real-world settings and fueled my commitment to making a positive impact through movement science.</p>
+    </div>
+  </motion.div>
+</div>
         </div>
       </section>
 
@@ -237,23 +238,28 @@ const About = () => {
       <section className="py-16 bg-primary-700 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <motion.div 
-                key={stat.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="bg-primary-600 p-4 rounded-full">
-                    {stat.icon}
-                  </div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
-                <div className="text-primary-200">{stat.label}</div>
-              </motion.div>
-            ))}
+            {[
+  { id: 1, value: '4', label: 'Years of Study', icon: <FaGraduationCap className="h-8 w-8" /> },
+  { id: 2, value: '100+', label: 'Athletes & Staff Helped', icon: <FaHeartbeat className="h-8 w-8" /> },
+  { id: 3, value: '400+', label: 'Practical Hours', icon: <GiMedicines className="h-8 w-8" /> },
+  { id: 4, value: '2025', label: 'Graduation Year', icon: <FaUserMd className="h-8 w-8" /> }
+].map((stat, index) => (
+  <motion.div 
+    key={stat.id}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+  >
+    <div className="flex justify-center mb-4">
+      <div className="bg-primary-600 p-4 rounded-full">
+        {stat.icon}
+      </div>
+    </div>
+    <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
+    <div className="text-primary-200">{stat.label}</div>
+  </motion.div>
+))}
           </div>
         </div>
       </section>

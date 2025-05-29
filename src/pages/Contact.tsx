@@ -36,8 +36,8 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <FaMapMarkerAlt className="h-6 w-6 text-primary-600" />,
-      title: 'Our Location',
-      content: '123 Health Street, Sandton\nGauteng, 2196\nSouth Africa',
+      title: 'Location',
+      content: '7584+GF, Philip Nel Park, Pretoria,\nGauteng, 0029\nSouth Africa',
       link: 'https://maps.google.com',
       linkText: 'View on Map'
     },
@@ -57,7 +57,7 @@ const Contact = () => {
     },
     {
       icon: <FaClock className="h-6 w-6 text-primary-600" />,
-      title: 'Working Hours',
+      title: 'Availability',
       content: 'Monday - Friday: 8:00 AM - 6:00 PM\nSaturday: 9:00 AM - 1:00 PM\nSunday: Closed',
       link: '/book',
       linkText: 'Book Appointment'
@@ -81,10 +81,10 @@ const Contact = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-50 mb-4">
-              Contact Us
+              Get in Touch
             </h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Get in touch with us for any questions about our services or to schedule an appointment.
+              Feel free to reach out to me with any questions, requests, or feedback. I’m always happy to connect, collaborate, or discuss biokinetics!
             </p>
           </div>
         </div>
@@ -101,9 +101,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
             >
-              <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold mb-8">Contact Nkechi</h2>
               <p className="text-gray-600 mb-8">
-                Have questions about our services or want to schedule an appointment? Fill out the form or contact us directly using the information below.
+                Have questions about my services or want to schedule an appointment? Fill out the form or contact us directly using the information below.
               </p>
               
               <div className="space-y-6">
@@ -302,13 +302,13 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="rounded-xl overflow-hidden shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.927318559017!2d28.0573583150285!3d-26.14470058347131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1d6c6f3f3d%3A0x1e9c4b8b8b8b8b8b8!2sSandton%2C%20Johannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza"
+              src="https://www.google.com/maps?q=7584%2BGF,+Philip+Nel+Park,+Pretoria,+0029&output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              title="Our Location"
+              title="Location"
             ></iframe>
           </div>
         </div>

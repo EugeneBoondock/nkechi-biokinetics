@@ -35,7 +35,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img src="/images/nkechi_logo.png" alt="Nkechi Biokinetics" className="h-12 w-auto" />
-            <span className="text-xl font-bold text-primary-600">NK Biokinetics</span>
+            <span className="text-xl font-bold text-primary-600">Nkechi does Biokinetics</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -59,6 +59,7 @@ const Navbar = () => {
             >
               Book Appointment
             </Link>
+
           </div>
 
           {/* Mobile menu button */}

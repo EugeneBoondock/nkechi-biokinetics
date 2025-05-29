@@ -47,7 +47,7 @@ const services: Service[] = [
     id: 'biokinetics',
     name: 'Biokinetics',
     icon: <FaUserMd />,
-    description: 'Professional biokinetics therapy sessions',
+    description: 'Personal biokinetics consultations and exercise therapy with Nkechi, a 4th-year Biokinetics student at TUT',
     duration: 60,
     price: 500
   },
@@ -55,7 +55,7 @@ const services: Service[] = [
     id: 'injury-rehab',
     name: 'Injury Rehabilitation',
     icon: <FaUserMd />,
-    description: 'Specialized programs to recover from sports injuries, accidents, or post-surgical rehabilitation.',
+    description: 'Guided injury rehabilitation and recovery sessions, based on my academic and practical training.',
     duration: 60,
     price: 550
   },
@@ -569,7 +569,7 @@ const Booking: React.FC = () => {
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Need Assistance?</h2>
                 <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                  Our team is here to help you with any questions or to schedule an appointment over the phone.
+                  I am here to help you with any questions or to schedule an appointment over the phone.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -591,7 +591,7 @@ const Booking: React.FC = () => {
                       <FaMapMarkerAlt className="h-5 w-5 text-primary-600" />
                     </div>
                     <h3 className="font-medium text-gray-900 mb-1">Visit Us</h3>
-                    <p className="text-gray-600">123 Health Street, Sandton</p>
+                    <p className="text-gray-600">7584+GF, Philip Nel Park, Pretoria,<br />Gauteng, 0029<br />South Africa</p>
                   </div>
                 </div>
               </div>
