@@ -10,7 +10,7 @@ const About = () => {
       <section className="bg-gradient-to-r from-primary-700 to-primary-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-2xl sm:text-5xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -18,13 +18,27 @@ const About = () => {
             About Nkechinyeremo Nompumelelo Aniamah
           </motion.h1>
           <motion.p 
-            className="text-xl text-primary-100 max-w-3xl mx-auto"
+            className="text-base sm:text-xl text-primary-100 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             Empowering others through movement and science — my journey in Biokinetics at Tshwane University of Technology
           </motion.p>
+        </div>
+      </section>
+
+      {/* Download CV Section */}
+      <section className="bg-white py-6">
+        <div className="container mx-auto px-4 text-center">
+          <a
+            href="/Nkechi_CV.pdf"
+            download
+            className="inline-flex items-center gap-2 px-4 py-2 text-base sm:px-6 sm:py-3 sm:text-lg font-bold bg-primary-700 hover:bg-primary-800 text-white rounded-lg shadow transition-colors duration-200"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" /></svg>
+            Download My CV
+          </a>
         </div>
       </section>
 

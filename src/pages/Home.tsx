@@ -85,26 +85,34 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-50">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-50">
               Welcome to Nkechi’s Biokinetics Portfolio
             </h1>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-base sm:text-xl text-gray-200 mb-6">
               I’m Nkechinyeremo Nompumelelo Aniamah, a passionate 4th year Biokinetics student at Tshwane University of Technology (TUT), graduating in 2025. Explore my journey, skills, and dedication to helping others achieve their best physical health.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Link 
                 to="/book" 
-                className="btn btn-primary inline-flex items-center justify-center px-8 py-4 text-lg"
+                className="btn btn-primary inline-flex items-center justify-center px-4 py-2 text-base sm:px-8 sm:py-4 sm:text-lg font-bold"
               >
                 Book an Appointment
                 <FaArrowRight className="ml-2" />
               </Link>
               <Link 
                 to="/services" 
-                className="btn bg-white text-primary-700 hover:bg-gray-100 inline-flex items-center justify-center px-8 py-4 text-lg"
+                className="btn bg-white text-primary-700 hover:bg-gray-100 inline-flex items-center justify-center px-4 py-2 text-base sm:px-8 sm:py-4 sm:text-lg font-bold"
               >
                 Services
               </Link>
+              <a
+                href="/Nkechi_CV.pdf"
+                download
+                className="btn bg-primary-700 hover:bg-primary-800 text-white inline-flex items-center justify-center px-4 py-2 text-base sm:px-8 sm:py-4 sm:text-lg font-bold rounded-lg shadow transition-colors duration-200"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" /></svg>
+                Download CV
+              </a>
             </div>
           </motion.div>
         </div>

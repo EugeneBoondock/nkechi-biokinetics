@@ -126,7 +126,7 @@ const Services = () => {
             My Biokinetics Skills & Offerings
           </motion.h1>
           <motion.p 
-            className="text-xl text-primary-100 max-w-3xl mx-auto"
+            className="text-base sm:text-lg text-primary-100 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -140,7 +140,7 @@ const Services = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">My Biokinetics Skills</h2>
+            <h2 className="text-2xl sm:text-4xl font-bold mt-2 mb-4">My Biokinetics Skills</h2>
             <p className="text-gray-600">
               As a 4th-year student at Tshwane University of Technology, I have developed a strong foundation in the following areas of biokinetics through coursework, clinical placements, and hands-on projects.
             </p>
@@ -194,7 +194,7 @@ const Services = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Specialized Programs</h2>
+            <h2 className="text-2xl sm:text-4xl font-bold mb-6">Specialized Programs</h2>
             <p className="text-gray-600">
               As a 4th-year Biokinetics student at Tshwane University of Technology, my training includes practical experience at the TUT Biokinetics Lab (university athletes). I focus on evidence-based exercise, rehabilitation, and performance optimization.
             </p>
@@ -245,7 +245,7 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">My Approach to Biokinetics</h2>
+              <h2 className="text-2xl sm:text-4xl font-bold mb-6">My Approach to Biokinetics</h2>
               <p className="text-gray-600 mb-6">
                 I believe in a client-centered approach that addresses the root cause of each challenge, not just the symptoms. My evidence-based methodology and hands-on practicals ensure you receive effective, individualized support—whether you’re an athlete, staff member, or anyone seeking better movement.
               </p>
@@ -289,20 +289,20 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-16 bg-primary-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Move Better, Feel Better?</h2>
+          <h2 className="text-2xl sm:text-4xl font-bold mb-6">Ready to Move Better, Feel Better?</h2>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8">
             Let’s work together to achieve your movement, health, or performance goals—book a session or connect with me today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/book" 
-              className="inline-block bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 rounded-full font-medium text-lg transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 text-base sm:px-6 sm:py-3 sm:text-lg font-bold bg-primary-700 hover:bg-primary-800 text-white rounded-lg shadow transition-colors duration-200"
             >
               Book a Session
             </a>
             <a 
               href="/contact" 
-              className="inline-block border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-full font-medium text-lg transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 text-base sm:px-6 sm:py-3 sm:text-lg font-bold border-2 border-white text-white hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors duration-200"
             >
               Contact Me
             </a>

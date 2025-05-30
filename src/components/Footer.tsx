@@ -92,6 +92,9 @@ const Footer = () => {
           <p>&copy; {currentYear} Nkechi Biokinetics. All rights reserved.</p>
         </div>
       </div>
+      <div className="mt-10 border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        Made by <a href="https://boondocklabs.co.za" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-400">Boondock Labs</a>
+      </div>
     </footer>
   );
 };

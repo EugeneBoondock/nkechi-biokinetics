@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
+  // Form state for controlled inputs
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,26 +12,16 @@ const Contact = () => {
     message: ''
   });
 
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    error: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  // Generic change handler
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      // Here you would typically send the form data to your backend
-      console.log('Form submitted:', formData);
-      setFormStatus({ submitted: true, error: '' });
-    } catch (error) {
-      setFormStatus({ submitted: false, error: 'An error occurred. Please try again.' });
-    }
-  };
 
   // Contact information
   const contactInfo = [
@@ -80,10 +71,10 @@ const Contact = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-50 mb-4">
+            <h1 className="text-2xl sm:text-4xl font-bold text-gray-50 mb-4">
               Get in Touch
             </h1>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-100 max-w-3xl mx-auto">
               Feel free to reach out to me with any questions, requests, or feedback. I’m always happy to connect, collaborate, or discuss biokinetics!
             </p>
           </div>
@@ -101,8 +92,8 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
             >
-              <h2 className="text-3xl font-bold mb-8">Contact Nkechi</h2>
-              <p className="text-gray-600 mb-8">
+              <h2 className="text-2xl sm:text-4xl font-bold mb-8">Contact Nkechi</h2>
+              <p className="text-base sm:text-lg text-gray-600 mb-8">
                 Have questions about my services or want to schedule an appointment? Fill out the form or contact us directly using the information below.
               </p>
               
@@ -120,11 +111,11 @@ const Contact = () => {
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg text-gray-900 mb-1">{item.title}</h3>
+                      <h3 className="font-semibold text-lg sm:text-xl text-gray-900 mb-1">{item.title}</h3>
                       <p className="text-gray-600 whitespace-pre-line mb-2">{item.content}</p>
                       <a 
                         href={item.link} 
-                        className="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center"
+                        className="text-primary-600 hover:text-primary-700 font-medium text-sm sm:text-lg inline-flex items-center"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -140,7 +131,7 @@ const Contact = () => {
 
               {/* Social Media */}
               <div className="mt-12">
-                <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
@@ -162,7 +153,7 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Contact Form */}
+            {/* Contact Form (Formspree) */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -170,128 +161,32 @@ const Contact = () => {
               transition={{ duration: 0.4 }}
               className="bg-gray-50 p-8 rounded-xl shadow-md"
             >
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-              
-              {formStatus.submitted ? (
-                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-6 rounded-lg text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Message Sent Successfully!</h3>
-                  <p className="text-gray-600">Thank you for contacting us. We'll get back to you within 24-48 hours.</p>
-                  <button
-                    onClick={() => setFormStatus({ ...formStatus, submitted: false })}
-                    className="mt-4 text-primary-600 hover:text-primary-700 font-medium"
-                  >
-                    Send another message
-                  </button>
+              <h2 className="text-2xl sm:text-4xl font-bold mb-6">Send Us a Message</h2>
+              <form action="https://formspree.io/f/mqabzkqw" method="POST" className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
+                  <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="space-y-5">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                        placeholder="Your name"
-                        required
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                          placeholder="your.email@example.com"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                          placeholder="+27 67 679 1066"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                        required
-                      >
-                        <option value="">Select a subject</option>
-                        <option value="General Inquiry">General Inquiry</option>
-                        <option value="Appointment">Book an Appointment</option>
-                        <option value="Services">Services Information</option>
-                        <option value="Billing">Billing Question</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message *</label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 resize-none"
-                        placeholder="Your message"
-                        rows={5}
-                        required
-                      ></textarea>
-                    </div>
-
-                    {formStatus.error && (
-                      <div className="bg-red-50 border-l-4 border-red-500 p-4">
-                        <div className="flex">
-                          <div className="flex-shrink-0">
-                            <svg className="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
-                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                            </svg>
-                          </div>
-                          <div className="ml-3">
-                            <p className="text-sm text-red-700">{formStatus.error}</p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex justify-end">
-                      <button
-                        type="submit"
-                        className="px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              )}
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
+                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">Phone</label>
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">Subject</label>
+                  <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
+                  <textarea id="message" name="message" rows={4} required value={formData.message} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400"></textarea>
+                </div>
+                <button type="submit" className="inline-flex items-center gap-2 px-4 py-2 text-base sm:px-6 sm:py-3 sm:text-lg font-bold bg-primary-700 hover:bg-primary-800 text-white rounded-lg shadow transition-colors duration-200">
+                  Send Message
+                </button>
+              </form>
             </motion.div>
           </div>
         </div>
