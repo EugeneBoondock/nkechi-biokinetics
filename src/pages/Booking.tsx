@@ -188,16 +188,37 @@ const Booking: React.FC = () => {
     setError(null);
 
     try {
-      // Add your form submission logic here
-      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulated API call
-      setIsSuccess(true);
-      // Scroll to the success banner for accessibility
-      setTimeout(() => {
-        const el = document.getElementById('booking-success-banner');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 100);
+      // Prepare FormData for Formspree
+      const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+      const form = new FormData();
+      form.append('name', formData.name);
+      form.append('email', formData.email);
+      form.append('phone', formData.phone);
+      form.append('service', formData.service);
+      form.append('notes', formData.notes);
+      form.append('date', formData.date);
+      form.append('time', formData.time);
+      form.append('message', formData.message);
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: form,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+      if (response.ok) {
+        setIsSuccess(true);
+        // Scroll to the success banner for accessibility
+        setTimeout(() => {
+          const el = document.getElementById('booking-success-banner');
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 100);
+      } else {
+        setError('An error occurred while submitting the form. Please try again.');
+      }
     } catch (err) {
       setError('An error occurred while submitting the form. Please try again.');
     } finally {

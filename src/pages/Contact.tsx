@@ -162,26 +162,26 @@ const Contact = () => {
               className="bg-gray-50 p-8 rounded-xl shadow-md"
             >
               <h2 className="text-2xl sm:text-4xl font-bold mb-6">Send Us a Message</h2>
-              <form action="https://formspree.io/f/mqabzkqw" method="POST" className="space-y-6">
+              <form action={import.meta.env.VITE_FORMSPREE_ENDPOINT} method="POST" className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
-                  <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
+                  <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full px-4 py-2 border border-gray-400 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
-                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
+                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-2 border border-gray-400 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">Phone</label>
-                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2 border border-gray-400 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                 </div>
                 <div>
                   <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">Subject</label>
-                  <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400" />
+                  <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-2 border border-gray-400 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
-                  <textarea id="message" name="message" rows={4} required value={formData.message} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-400"></textarea>
+                  <textarea id="message" name="message" rows={4} required value={formData.message} onChange={handleChange} className="w-full px-4 py-2 border border-gray-400 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
                 </div>
                 <button type="submit" className="inline-flex items-center gap-2 px-4 py-2 text-base sm:px-6 sm:py-3 sm:text-lg font-bold bg-primary-700 hover:bg-primary-800 text-white rounded-lg shadow transition-colors duration-200">
                   Send Message
